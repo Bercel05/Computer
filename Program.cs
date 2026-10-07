@@ -1,4 +1,7 @@
 
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Computer.Controllers.models;
+
 namespace Computer
 {
     public class Program
@@ -6,6 +9,8 @@ namespace Computer
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<ComputerShopDbContext>();
 
             // Add services to the container.
 
